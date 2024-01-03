@@ -8,7 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 using OtelRezAppProje.Entity;
+using DevExpress.XtraEditors;
 
 namespace OtelRezAppProje.Formlar.Tanımlamalar
 {
@@ -39,7 +41,15 @@ namespace OtelRezAppProje.Formlar.Tanımlamalar
 
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            db.SaveChanges();
+            try
+            {
+                db.SaveChanges();
+            }
+            catch(Exception)
+            {
+                XtraMessageBox.Show("Lütfen değerleri kontrol edip yeniden giriş yapın!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+           
         }
     }
 }
