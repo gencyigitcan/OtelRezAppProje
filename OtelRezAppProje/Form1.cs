@@ -27,6 +27,12 @@ namespace OtelRezAppProje
             Formlar.Tanımlamalar.FrmDurum fr = new Formlar.Tanımlamalar.FrmDurum();
             fr.Show();
         }
+
+        private void BtnBirimTanimlari_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Formlar.Tanımlamalar.FrmBirim fr = new Formlar.Tanımlamalar.FrmBirim();
+            fr.Show();
+        }
     }
 }
  
