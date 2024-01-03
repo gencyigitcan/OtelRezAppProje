@@ -51,5 +51,16 @@ namespace OtelRezAppProje.Formlar.Tanımlamalar
             }
            
         }
+
+        private void durumuSilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bindingSource1.RemoveCurrent();
+            db.SaveChanges();
+        }
+
+        private void vazgeçToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
