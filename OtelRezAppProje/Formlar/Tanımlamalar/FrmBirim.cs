@@ -25,6 +25,18 @@ namespace OtelRezAppProje.Formlar.Tanımlamalar
         {
             db.TblBirim.Load();
             bindingSource1.DataSource = db.TblBirim.Local;
+
+            repositoryItemLookUpEditDurum.DataSource = (from x in db.TblDurum
+                                                        select new
+                                                        {
+                                                            x.DurumId,
+                                                            x.DurumAd
+                                                        }).ToList();
+        }
+
+        private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            db.SaveChanges();
         }
     }
 }
