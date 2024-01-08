@@ -26,7 +26,7 @@ namespace OtelRezAppProje.Formlar.Tanımlamalar
             db.TblOda.Load();
             bindingSource1.DataSource = db.TblOda.Local;
 
-            repositoryItemLookUpEditDurum.DataSource = (from x in db.TblDurum
+            repositoryItemLookUpDurum.DataSource = (from x in db.TblDurum
                                                         select new
                                                         {
                                                             x.DurumId,
