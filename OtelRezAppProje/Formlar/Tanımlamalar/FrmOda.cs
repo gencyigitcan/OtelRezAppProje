@@ -1,4 +1,5 @@
-﻿using OtelRezAppProje.Entity;
+﻿using DevExpress.XtraEditors;
+using OtelRezAppProje.Entity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,6 +33,18 @@ namespace OtelRezAppProje.Formlar.Tanımlamalar
                                                             x.DurumId,
                                                             x.DurumAd
                                                         }).ToList();
+        }
+
+        private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            try
+            {
+                db.SaveChanges();
+            }
+            catch (Exception)
+            {
+                XtraMessageBox.Show("Bilgiler kaydedilirken hata oluştu, kontrol edip tekrar deneyiniz!");
+            }
         }
     }
 }

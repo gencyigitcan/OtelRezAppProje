@@ -72,6 +72,7 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
+            this.gridView1.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView1_CellValueChanged);
             // 
             // gridColumn1
             // 
@@ -119,7 +120,7 @@
             this.repositoryItemLookUpDurum.AutoHeight = false;
             this.repositoryItemLookUpDurum.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemLookUpDurum.DisplayMember = "Durum Adı";
+            this.repositoryItemLookUpDurum.DisplayMember = "DurumAd";
             this.repositoryItemLookUpDurum.Name = "repositoryItemLookUpDurum";
             this.repositoryItemLookUpDurum.NullText = "Durumu Seçiniz";
             this.repositoryItemLookUpDurum.ValueMember = "DurumId";
