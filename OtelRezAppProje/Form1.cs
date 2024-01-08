@@ -63,6 +63,12 @@ namespace OtelRezAppProje
             Formlar.Tanımlamalar.FrmOda fr = new Formlar.Tanımlamalar.FrmOda();
             fr.Show();
         }
+
+        private void BtnTelefonTanimlari_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Formlar.Tanımlamalar.FrmTelefon fr = new Formlar.Tanımlamalar.FrmTelefon();
+            fr.Show();
+        }
     }
 }
  
