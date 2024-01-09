@@ -81,6 +81,12 @@ namespace OtelRezAppProje
             Formlar.Tanımlamalar.FrmUrunGrup fr = new Formlar.Tanımlamalar.FrmUrunGrup();
             fr.Show();
         }
+
+        private void BtnPersonelKarti_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Formlar.Personel.FrmPersonelKarti fr = new Formlar.Personel.FrmPersonelKarti();
+            fr.Show();
+        }
     }
 }
  
