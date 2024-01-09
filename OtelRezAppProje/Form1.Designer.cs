@@ -54,6 +54,7 @@
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.BtnUrunGrupTanimları = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,9 +72,10 @@
             this.BtnKurTanimlari,
             this.BtnOdaTanimlari,
             this.BtnTelefonTanimlari,
-            this.BtnUlkeTanimlari});
+            this.BtnUlkeTanimlari,
+            this.BtnUrunGrupTanimları});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 11;
+            this.ribbonControl1.MaxItemId = 12;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -251,7 +253,17 @@
             this.ribbonPageGroup6.ItemLinks.Add(this.BtnOdaTanimlari);
             this.ribbonPageGroup6.ItemLinks.Add(this.BtnTelefonTanimlari);
             this.ribbonPageGroup6.ItemLinks.Add(this.BtnUlkeTanimlari);
+            this.ribbonPageGroup6.ItemLinks.Add(this.BtnUrunGrupTanimları);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
+            // 
+            // BtnUrunGrupTanimları
+            // 
+            this.BtnUrunGrupTanimları.Caption = "Ürün Grup Tanımları";
+            this.BtnUrunGrupTanimları.Id = 11;
+            this.BtnUrunGrupTanimları.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.BtnUrunGrupTanimları.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.BtnUrunGrupTanimları.Name = "BtnUrunGrupTanimları";
+            this.BtnUrunGrupTanimları.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnUrunGrupTanimları_ItemClick);
             // 
             // Form1
             // 
@@ -298,6 +310,7 @@
         private DevExpress.XtraBars.BarButtonItem BtnOdaTanimlari;
         private DevExpress.XtraBars.BarButtonItem BtnTelefonTanimlari;
         private DevExpress.XtraBars.BarButtonItem BtnUlkeTanimlari;
+        private DevExpress.XtraBars.BarButtonItem BtnUrunGrupTanimları;
     }
 }
 

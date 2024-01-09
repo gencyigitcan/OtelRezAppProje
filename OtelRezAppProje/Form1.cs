@@ -75,6 +75,12 @@ namespace OtelRezAppProje
             Formlar.Tanımlamalar.FrmUlke fr = new Formlar.Tanımlamalar.FrmUlke();
             fr.Show();
         }
+
+        private void BtnUrunGrupTanimları_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Formlar.Tanımlamalar.FrmUrunGrup fr = new Formlar.Tanımlamalar.FrmUrunGrup();
+            fr.Show();
+        }
     }
 }
  
