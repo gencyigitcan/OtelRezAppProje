@@ -1,6 +1,6 @@
 ﻿namespace OtelRezAppProje.Formlar.Tanımlamalar
 {
-    partial class FrmTelefon
+    partial class FrmUlke
     {
         /// <summary>
         /// Required designer variable.
@@ -35,7 +35,6 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpDurum = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -69,7 +68,7 @@
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemLookUpDurum});
             this.gridControl1.Size = new System.Drawing.Size(494, 421);
-            this.gridControl1.TabIndex = 2;
+            this.gridControl1.TabIndex = 3;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -77,7 +76,6 @@
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
-            this.gridColumn3,
             this.gridColumn2});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
@@ -86,19 +84,11 @@
             // 
             // gridColumn1
             // 
-            this.gridColumn1.Caption = "Açıklama";
-            this.gridColumn1.FieldName = "Aciklama";
+            this.gridColumn1.Caption = "Ülke Adı";
+            this.gridColumn1.FieldName = "UlkeAd";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.Caption = "Telefon No";
-            this.gridColumn3.FieldName = "TelefonNo";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
             // 
             // gridColumn2
             // 
@@ -119,7 +109,7 @@
             this.repositoryItemLookUpDurum.NullText = "Durumu Seçiniz";
             this.repositoryItemLookUpDurum.ValueMember = "DurumId";
             // 
-            // FrmTelefon
+            // FrmUlke
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -128,10 +118,10 @@
             this.Controls.Add(this.gridControl1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmTelefon";
+            this.Name = "FrmUlke";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Telefon Tanımları";
-            this.Load += new System.EventHandler(this.FrmTelefon_Load);
+            this.Text = "Ülke Tanımları";
+            this.Load += new System.EventHandler(this.FrmUlke_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
@@ -142,13 +132,12 @@
         }
 
         #endregion
+        private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem silToolStripMenuItem;
-        private System.Windows.Forms.BindingSource bindingSource1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpDurum;
     }
