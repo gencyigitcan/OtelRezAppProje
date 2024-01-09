@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using OtelRezAppProje.Entity;
-using DevExpress.XtraEditors;
 
 namespace OtelRezAppProje.Formlar.Tanımlamalar
 {

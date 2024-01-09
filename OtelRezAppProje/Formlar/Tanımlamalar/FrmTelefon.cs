@@ -35,6 +35,12 @@ namespace OtelRezAppProje.Formlar.Tanımlamalar
                                                     }).ToList();
         }
 
+        private void silToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bindingSource1.RemoveCurrent();
+            db.SaveChanges();
+        }
+
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
             try
@@ -45,12 +51,6 @@ namespace OtelRezAppProje.Formlar.Tanımlamalar
             {
                 XtraMessageBox.Show("Bilgiler kaydedilirken hata oluştu, kontrol edip tekrar deneyiniz!");
             }
-        }
-
-        private void silToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            bindingSource1.RemoveCurrent();
-            db.SaveChanges();
         }
     }
 }
