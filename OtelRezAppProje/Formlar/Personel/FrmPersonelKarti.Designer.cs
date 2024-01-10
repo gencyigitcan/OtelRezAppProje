@@ -61,7 +61,7 @@
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnVazgeç = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
@@ -473,7 +473,7 @@
             // groupControl2
             // 
             this.groupControl2.Controls.Add(this.simpleButton2);
-            this.groupControl2.Controls.Add(this.simpleButton1);
+            this.groupControl2.Controls.Add(this.BtnVazgeç);
             this.groupControl2.Location = new System.Drawing.Point(6, 201);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.ShowCaption = false;
@@ -491,15 +491,16 @@
             this.simpleButton2.TabIndex = 1;
             this.simpleButton2.Text = "Kaydet";
             // 
-            // simpleButton1
+            // BtnVazgeç
             // 
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(331, 5);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.simpleButton1.Size = new System.Drawing.Size(134, 39);
-            this.simpleButton1.TabIndex = 0;
-            this.simpleButton1.Text = "Vazgeç";
+            this.BtnVazgeç.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.BtnVazgeç.Location = new System.Drawing.Point(331, 5);
+            this.BtnVazgeç.Name = "BtnVazgeç";
+            this.BtnVazgeç.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.BtnVazgeç.Size = new System.Drawing.Size(134, 39);
+            this.BtnVazgeç.TabIndex = 0;
+            this.BtnVazgeç.Text = "Vazgeç";
+            this.BtnVazgeç.Click += new System.EventHandler(this.BtnVazgeç_Click);
             // 
             // groupControl3
             // 
@@ -963,7 +964,7 @@
         private DevExpress.XtraEditors.GroupControl groupControl6;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton BtnVazgeç;
         private DevExpress.XtraEditors.PictureEdit pictureEdit15;
         private DevExpress.XtraEditors.PictureEdit pictureEdit14;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage3;

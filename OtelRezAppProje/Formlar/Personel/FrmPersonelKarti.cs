@@ -36,5 +36,10 @@ namespace OtelRezAppProje.Formlar.Personel
                                                          x.GorevAd
                                                      }).ToList();
         }
+
+        private void BtnVazgeç_Click(object sender, EventArgs e)
+        {
+            memoEdit1.Text = pictureEdit14.GetLoadedImageLocation();
+        }
     }
 }
