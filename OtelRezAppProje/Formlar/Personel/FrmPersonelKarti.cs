@@ -39,7 +39,7 @@ namespace OtelRezAppProje.Formlar.Personel
 
         private void BtnVazgeç_Click(object sender, EventArgs e)
         {
-            memoEdit1.Text = pictureEdit14.GetLoadedImageLocation();
+            TxtAdres.Text = PictureEditOn.GetLoadedImageLocation();
         }
     }
 }
