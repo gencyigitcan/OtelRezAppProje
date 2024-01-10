@@ -1,4 +1,6 @@
-﻿using OtelRezAppProje.Entity;
+﻿using DevExpress.XtraEditors;
+using OtelRezAppProje.Entity;
+using OtelRezAppProje.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,6 +42,27 @@ namespace OtelRezAppProje.Formlar.Personel
         private void BtnVazgeç_Click(object sender, EventArgs e)
         {
             TxtAdres.Text = PictureEditOn.GetLoadedImageLocation();
+        }
+
+        private void BtnKaydet_Click(object sender, EventArgs e)
+        {
+            Repository<TblPersonel> repo = new Repository<TblPersonel>();
+            TblPersonel t = new TblPersonel();
+
+            t.AdSoyad = TxtAdSoyad.Text;
+            t.TcKimlikNo = TxtTc.Text;
+            t.Adres = TxtAdres.Text;
+            t.Telefon = TxtTelefon.Text;
+            t.MailAdresi = TxtMail.Text;
+            t.IseGirisTarihi = DateTime.Parse(dateEditGiris.Text);
+            // t.IstenCikisTarihi = DateTime.Parse(dateEditCikis.Text);
+            t.Departman = int.Parse(lookUpEditDepartman.EditValue.ToString());
+            t.Gorev = int.Parse(lookUpEditGorev.EditValue.ToString());
+            t.Aciklama = TxtAciklama.Text;
+            t.Durum = 1;
+
+            repo.TAdd(t);
+            XtraMessageBox.Show("Personel başarılı bir şekilde sisteme kaydedildi.");
         }
     }
 }

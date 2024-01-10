@@ -478,6 +478,7 @@
             this.BtnKaydet.Size = new System.Drawing.Size(134, 39);
             this.BtnKaydet.TabIndex = 1;
             this.BtnKaydet.Text = "Kaydet";
+            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
             // BtnVazgeç
             // 
