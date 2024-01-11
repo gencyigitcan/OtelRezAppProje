@@ -31,7 +31,7 @@ namespace OtelRezAppProje.Repositories
         {
             return db.Set<T>().Find(id);
         }
-        public void TUpdate()
+        public void TUpdate(T p)
         {
             db.SaveChanges();
         }

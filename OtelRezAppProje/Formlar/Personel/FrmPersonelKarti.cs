@@ -22,11 +22,12 @@ namespace OtelRezAppProje.Formlar.Personel
 
         Db_OtelRezAppEntities db = new Db_OtelRezAppEntities();
 
-        public string id;
+        public int id;
+        Repository<TblPersonel> repo = new Repository<TblPersonel>();
 
         private void FrmPersonelKarti_Load(object sender, EventArgs e)
         {
-            this.Text = id;
+            this.Text = id.ToString();
             lookUpEditDepartman.Properties.DataSource = (from x in db.TblDepartman
                                                          select new
                                                          {
@@ -49,7 +50,7 @@ namespace OtelRezAppProje.Formlar.Personel
 
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
-            Repository<TblPersonel> repo = new Repository<TblPersonel>();
+            
             TblPersonel t = new TblPersonel();
 
             t.AdSoyad = TxtAdSoyad.Text;
@@ -71,6 +72,32 @@ namespace OtelRezAppProje.Formlar.Personel
 
             repo.TAdd(t);
             XtraMessageBox.Show("Personel başarılı bir şekilde sisteme kaydedildi.");
+        }
+
+        private void BtnGuncelle_Click(object sender, EventArgs e)
+        {
+            var deger = repo.Find(x => x.PersonelId == id);
+
+            deger.AdSoyad = TxtAdSoyad.Text;
+            deger.TcKimlikNo = TxtTc.Text;
+            deger.Adres = TxtAdres.Text;
+            // deger.Telefon = TxtTelefon.Text;
+            // deger.MailAdresi = TxtMail.Text;
+            // deger.IseGirisTarihi = DateTime.Parse(dateEditGiris.Text);
+            // t.IstenCikisTarihi = DateTime.Parse(dateEditCikis.Text);
+            // deger.Departman = int.Parse(lookUpEditDepartman.EditValue.ToString());
+            // deger.Gorev = int.Parse(lookUpEditGorev.EditValue.ToString());
+            // deger.Aciklama = TxtAciklama.Text;
+            // deger.MailAdresi = TxtMail.Text;
+            // deger.KimlikOn = PictureEditOn.GetLoadedImageLocation();
+            // deger.KimlikArka = PictureEditArka.GetLoadedImageLocation();
+            // t.Yetki = 
+            // t.Sifre = TxtSifre.Text;
+            // deger.Durum = 1;
+
+            repo.TUpdate(deger);
+            XtraMessageBox.Show("Personel kartı bilgileri başarıyla güncellendi.","Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
         }
     }
 }

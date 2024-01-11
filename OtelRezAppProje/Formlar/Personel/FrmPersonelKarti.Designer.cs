@@ -33,6 +33,8 @@
             this.TxtAdSoyad = new DevExpress.XtraEditors.TextEdit();
             this.lookUpEditDepartman = new DevExpress.XtraEditors.LookUpEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.dateEditCikis = new DevExpress.XtraEditors.DateEdit();
+            this.dateEditGiris = new DevExpress.XtraEditors.DateEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit8 = new DevExpress.XtraEditors.PictureEdit();
             this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
@@ -59,7 +61,7 @@
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.BtnKaydet = new DevExpress.XtraEditors.SimpleButton();
-            this.BtnVazgeç = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnVazgec = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.TxtAdres = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
@@ -92,13 +94,16 @@
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit16 = new DevExpress.XtraEditors.PictureEdit();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.dateEditGiris = new DevExpress.XtraEditors.DateEdit();
-            this.dateEditCikis = new DevExpress.XtraEditors.DateEdit();
+            this.BtnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtAdSoyad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditDepartman.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditCikis.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditCikis.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditGiris.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditGiris.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit8.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit9.Properties)).BeginInit();
@@ -146,10 +151,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl7)).BeginInit();
             this.groupControl7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit16.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditGiris.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditGiris.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditCikis.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditCikis.Properties.CalendarTimeProperties)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureEdit1
@@ -219,6 +220,30 @@
             this.groupControl1.Size = new System.Drawing.Size(485, 116);
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "groupControl1";
+            // 
+            // dateEditCikis
+            // 
+            this.dateEditCikis.EditValue = null;
+            this.dateEditCikis.Location = new System.Drawing.Point(345, 87);
+            this.dateEditCikis.Name = "dateEditCikis";
+            this.dateEditCikis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEditCikis.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEditCikis.Size = new System.Drawing.Size(132, 20);
+            this.dateEditCikis.TabIndex = 26;
+            // 
+            // dateEditGiris
+            // 
+            this.dateEditGiris.EditValue = null;
+            this.dateEditGiris.Location = new System.Drawing.Point(345, 61);
+            this.dateEditGiris.Name = "dateEditGiris";
+            this.dateEditGiris.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEditGiris.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEditGiris.Size = new System.Drawing.Size(132, 20);
+            this.dateEditGiris.TabIndex = 25;
             // 
             // labelControl8
             // 
@@ -460,8 +485,9 @@
             // 
             // groupControl2
             // 
+            this.groupControl2.Controls.Add(this.BtnGuncelle);
             this.groupControl2.Controls.Add(this.BtnKaydet);
-            this.groupControl2.Controls.Add(this.BtnVazgeç);
+            this.groupControl2.Controls.Add(this.BtnVazgec);
             this.groupControl2.Location = new System.Drawing.Point(6, 201);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.ShowCaption = false;
@@ -471,7 +497,7 @@
             // 
             // BtnKaydet
             // 
-            this.BtnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.BtnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnKaydet.ImageOptions.Image")));
             this.BtnKaydet.Location = new System.Drawing.Point(0, 5);
             this.BtnKaydet.Name = "BtnKaydet";
             this.BtnKaydet.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -480,16 +506,16 @@
             this.BtnKaydet.Text = "Kaydet";
             this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
-            // BtnVazgeç
+            // BtnVazgec
             // 
-            this.BtnVazgeç.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnVazgeç.ImageOptions.Image")));
-            this.BtnVazgeç.Location = new System.Drawing.Point(331, 5);
-            this.BtnVazgeç.Name = "BtnVazgeç";
-            this.BtnVazgeç.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.BtnVazgeç.Size = new System.Drawing.Size(134, 39);
-            this.BtnVazgeç.TabIndex = 0;
-            this.BtnVazgeç.Text = "Vazgeç";
-            this.BtnVazgeç.Click += new System.EventHandler(this.BtnVazgeç_Click);
+            this.BtnVazgec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnVazgeç.ImageOptions.Image")));
+            this.BtnVazgec.Location = new System.Drawing.Point(331, 5);
+            this.BtnVazgec.Name = "BtnVazgec";
+            this.BtnVazgec.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.BtnVazgec.Size = new System.Drawing.Size(134, 39);
+            this.BtnVazgec.TabIndex = 0;
+            this.BtnVazgec.Text = "Vazgeç";
+            this.BtnVazgec.Click += new System.EventHandler(this.BtnVazgeç_Click);
             // 
             // groupControl3
             // 
@@ -828,29 +854,16 @@
             this.radioButton1.Text = "Yetki 1";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // dateEditGiris
+            // BtnGuncelle
             // 
-            this.dateEditGiris.EditValue = null;
-            this.dateEditGiris.Location = new System.Drawing.Point(345, 61);
-            this.dateEditGiris.Name = "dateEditGiris";
-            this.dateEditGiris.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditGiris.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditGiris.Size = new System.Drawing.Size(132, 20);
-            this.dateEditGiris.TabIndex = 25;
-            // 
-            // dateEditCikis
-            // 
-            this.dateEditCikis.EditValue = null;
-            this.dateEditCikis.Location = new System.Drawing.Point(345, 87);
-            this.dateEditCikis.Name = "dateEditCikis";
-            this.dateEditCikis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditCikis.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditCikis.Size = new System.Drawing.Size(132, 20);
-            this.dateEditCikis.TabIndex = 26;
+            this.BtnGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.BtnGuncelle.Location = new System.Drawing.Point(191, 6);
+            this.BtnGuncelle.Name = "BtnGuncelle";
+            this.BtnGuncelle.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.BtnGuncelle.Size = new System.Drawing.Size(134, 39);
+            this.BtnGuncelle.TabIndex = 2;
+            this.BtnGuncelle.Text = "Güncelle";
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
             // FrmPersonelKarti
             // 
@@ -870,6 +883,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditCikis.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditCikis.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditGiris.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditGiris.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit8.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit9.Properties)).EndInit();
@@ -923,10 +940,6 @@
             this.groupControl7.ResumeLayout(false);
             this.groupControl7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit16.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditGiris.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditGiris.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditCikis.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditCikis.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -980,7 +993,7 @@
         private DevExpress.XtraEditors.GroupControl groupControl6;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.SimpleButton BtnKaydet;
-        private DevExpress.XtraEditors.SimpleButton BtnVazgeç;
+        private DevExpress.XtraEditors.SimpleButton BtnVazgec;
         private DevExpress.XtraEditors.PictureEdit PictureEditArka;
         private DevExpress.XtraEditors.PictureEdit PictureEditOn;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage3;
@@ -998,5 +1011,6 @@
         private System.Windows.Forms.RadioButton radioButton3;
         private DevExpress.XtraEditors.DateEdit dateEditCikis;
         private DevExpress.XtraEditors.DateEdit dateEditGiris;
+        private DevExpress.XtraEditors.SimpleButton BtnGuncelle;
     }
 }

@@ -39,7 +39,7 @@ namespace OtelRezAppProje.Formlar.Personel
         private void gridView1_DoubleClick(object sender, EventArgs e)
         {
             FrmPersonelKarti fr = new FrmPersonelKarti();
-            fr.id = gridView1.GetFocusedRowCellValue("PersonelId").ToString();
+            fr.id = int.Parse(gridView1.GetFocusedRowCellValue("PersonelId").ToString());
             fr.Show();
         }
     }
