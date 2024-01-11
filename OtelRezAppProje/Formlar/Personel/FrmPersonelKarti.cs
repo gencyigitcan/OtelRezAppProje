@@ -42,6 +42,8 @@ namespace OtelRezAppProje.Formlar.Personel
                 dateEditGiris.Text = personel.IseGirisTarihi.ToString();
                 TxtAciklama.Text = personel.Aciklama;
                 TxtSifre.Text = personel.Sifre;
+                PictureEditOn.Image = Image.FromFile(personel.KimlikOn);
+                PictureEditArka.Image = Image.FromFile(personel.KimlikArka);
             }
             lookUpEditDepartman.Properties.DataSource = (from x in db.TblDepartman
                                                          select new
@@ -104,8 +106,8 @@ namespace OtelRezAppProje.Formlar.Personel
             // deger.Gorev = int.Parse(lookUpEditGorev.EditValue.ToString());
             // deger.Aciklama = TxtAciklama.Text;
             // deger.MailAdresi = TxtMail.Text;
-            // deger.KimlikOn = PictureEditOn.GetLoadedImageLocation();
-            // deger.KimlikArka = PictureEditArka.GetLoadedImageLocation();
+            deger.KimlikOn = PictureEditOn.GetLoadedImageLocation();
+            deger.KimlikArka = PictureEditArka.GetLoadedImageLocation();
             // t.Yetki = 
             // t.Sifre = TxtSifre.Text;
             // deger.Durum = 1;
