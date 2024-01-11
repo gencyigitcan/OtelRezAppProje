@@ -28,6 +28,21 @@ namespace OtelRezAppProje.Formlar.Personel
         private void FrmPersonelKarti_Load(object sender, EventArgs e)
         {
             this.Text = id.ToString();
+
+            if (id != 0)
+            {
+                var personel = repo.Find(x => x.PersonelId == id);
+
+                TxtAdSoyad.Text = personel.AdSoyad;
+                TxtTc.Text = personel.TcKimlikNo;
+                TxtAdres.Text = personel.Adres;
+                TxtTelefon.Text = personel.Telefon;
+                TxtMail.Text = personel.MailAdresi;
+                dateEditCikis.Text = personel.IstenCikisTarihi.ToString();
+                dateEditGiris.Text = personel.IseGirisTarihi.ToString();
+                TxtAciklama.Text = personel.Aciklama;
+                TxtSifre.Text = personel.Sifre;
+            }
             lookUpEditDepartman.Properties.DataSource = (from x in db.TblDepartman
                                                          select new
                                                          {
