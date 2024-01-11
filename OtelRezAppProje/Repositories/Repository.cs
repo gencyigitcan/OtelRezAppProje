@@ -17,6 +17,10 @@ namespace OtelRezAppProje.Repositories
         {
             return db.Set<T>().ToList();
         }
+        public List<T> GetListById(Expression<Func<T, bool>> filter)
+        { 
+            return db.Set<T>().Where(filter).ToList();
+        }
         public void TAdd(T p)
         {
             db.Set<T>().Add(p);
