@@ -59,6 +59,11 @@ namespace OtelRezAppProje.Formlar.Personel
             t.Departman = int.Parse(lookUpEditDepartman.EditValue.ToString());
             t.Gorev = int.Parse(lookUpEditGorev.EditValue.ToString());
             t.Aciklama = TxtAciklama.Text;
+            t.MailAdresi = TxtMail.Text;
+            t.KimlikOn = PictureEditOn.GetLoadedImageLocation();
+            t.KimlikArka = PictureEditArka.GetLoadedImageLocation();
+            // t.Yetki = 
+            // t.Sifre = TxtSifre.Text;
             t.Durum = 1;
 
             repo.TAdd(t);
