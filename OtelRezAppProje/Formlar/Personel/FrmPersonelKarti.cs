@@ -22,8 +22,11 @@ namespace OtelRezAppProje.Formlar.Personel
 
         Db_OtelRezAppEntities db = new Db_OtelRezAppEntities();
 
+        public string id;
+
         private void FrmPersonelKarti_Load(object sender, EventArgs e)
         {
+            this.Text = id;
             lookUpEditDepartman.Properties.DataSource = (from x in db.TblDepartman
                                                          select new
                                                          {
