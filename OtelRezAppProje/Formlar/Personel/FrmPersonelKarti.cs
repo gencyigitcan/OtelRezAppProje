@@ -110,8 +110,8 @@ namespace OtelRezAppProje.Formlar.Personel
             deger.Gorev = int.Parse(lookUpEditGorev.EditValue.ToString());
             // deger.Aciklama = TxtAciklama.Text;
             // deger.MailAdresi = TxtMail.Text;
-            deger.KimlikOn = PictureEditOn.GetLoadedImageLocation();
-            deger.KimlikArka = PictureEditArka.GetLoadedImageLocation();
+            deger.KimlikOn = labelControl17.Text;
+            deger.KimlikArka = labelControl18.Text;
             // t.Yetki = 
             // t.Sifre = TxtSifre.Text;
             // deger.Durum = 1;
@@ -120,6 +120,16 @@ namespace OtelRezAppProje.Formlar.Personel
             repo.TUpdate(deger);
             XtraMessageBox.Show("Personel kartı bilgileri başarıyla güncellendi.","Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
+        }
+
+        private void PictureEditOn_EditValueChanged(object sender, EventArgs e)
+        {
+            labelControl17.Text = PictureEditOn.GetLoadedImageLocation().ToString();    
+        }
+
+        private void PictureEditArka_EditValueChanged(object sender, EventArgs e)
+        {
+            labelControl18.Text = PictureEditArka.GetLoadedImageLocation().ToString();
         }
     }
 }

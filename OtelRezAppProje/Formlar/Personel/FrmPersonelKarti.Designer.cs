@@ -96,6 +96,7 @@
             this.pictureEdit16 = new DevExpress.XtraEditors.PictureEdit();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtAdSoyad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditDepartman.Properties)).BeginInit();
@@ -654,6 +655,7 @@
             // 
             // groupControl5
             // 
+            this.groupControl5.Controls.Add(this.labelControl18);
             this.groupControl5.Controls.Add(this.labelControl17);
             this.groupControl5.Controls.Add(this.TxtAciklama);
             this.groupControl5.Controls.Add(this.labelControl13);
@@ -712,6 +714,7 @@
             this.PictureEditArka.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.PictureEditArka.Size = new System.Drawing.Size(183, 96);
             this.PictureEditArka.TabIndex = 1;
+            this.PictureEditArka.EditValueChanged += new System.EventHandler(this.PictureEditArka_EditValueChanged);
             // 
             // PictureEditOn
             // 
@@ -721,6 +724,7 @@
             this.PictureEditOn.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.PictureEditOn.Size = new System.Drawing.Size(183, 96);
             this.PictureEditOn.TabIndex = 0;
+            this.PictureEditOn.EditValueChanged += new System.EventHandler(this.PictureEditOn_EditValueChanged);
             // 
             // xtraTabPage3
             // 
@@ -874,6 +878,16 @@
             this.labelControl17.Size = new System.Drawing.Size(69, 13);
             this.labelControl17.TabIndex = 30;
             this.labelControl17.Text = "labelControl17";
+            this.labelControl17.Visible = false;
+            // 
+            // labelControl18
+            // 
+            this.labelControl18.Location = new System.Drawing.Point(282, 107);
+            this.labelControl18.Name = "labelControl18";
+            this.labelControl18.Size = new System.Drawing.Size(69, 13);
+            this.labelControl18.TabIndex = 31;
+            this.labelControl18.Text = "labelControl18";
+            this.labelControl18.Visible = false;
             // 
             // FrmPersonelKarti
             // 
@@ -1023,5 +1037,6 @@
         private DevExpress.XtraEditors.DateEdit dateEditGiris;
         private DevExpress.XtraEditors.SimpleButton BtnGuncelle;
         private DevExpress.XtraEditors.LabelControl labelControl17;
+        private DevExpress.XtraEditors.LabelControl labelControl18;
     }
 }
