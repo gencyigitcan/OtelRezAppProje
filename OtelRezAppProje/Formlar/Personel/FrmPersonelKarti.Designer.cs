@@ -95,6 +95,7 @@
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit16 = new DevExpress.XtraEditors.PictureEdit();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtAdSoyad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditDepartman.Properties)).BeginInit();
@@ -498,7 +499,7 @@
             // BtnGuncelle
             // 
             this.BtnGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnGuncelle.ImageOptions.Image")));
-            this.BtnGuncelle.Location = new System.Drawing.Point(191, 6);
+            this.BtnGuncelle.Location = new System.Drawing.Point(153, 5);
             this.BtnGuncelle.Name = "BtnGuncelle";
             this.BtnGuncelle.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.BtnGuncelle.Size = new System.Drawing.Size(134, 39);
@@ -653,6 +654,7 @@
             // 
             // groupControl5
             // 
+            this.groupControl5.Controls.Add(this.labelControl17);
             this.groupControl5.Controls.Add(this.TxtAciklama);
             this.groupControl5.Controls.Add(this.labelControl13);
             this.groupControl5.Controls.Add(this.pictureEdit13);
@@ -865,6 +867,14 @@
             this.radioButton1.Text = "Yetki 1";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
+            // labelControl17
+            // 
+            this.labelControl17.Location = new System.Drawing.Point(88, 107);
+            this.labelControl17.Name = "labelControl17";
+            this.labelControl17.Size = new System.Drawing.Size(69, 13);
+            this.labelControl17.TabIndex = 30;
+            this.labelControl17.Text = "labelControl17";
+            // 
             // FrmPersonelKarti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1012,5 +1022,6 @@
         private DevExpress.XtraEditors.DateEdit dateEditCikis;
         private DevExpress.XtraEditors.DateEdit dateEditGiris;
         private DevExpress.XtraEditors.SimpleButton BtnGuncelle;
+        private DevExpress.XtraEditors.LabelControl labelControl17;
     }
 }

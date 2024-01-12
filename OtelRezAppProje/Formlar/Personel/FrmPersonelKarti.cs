@@ -42,8 +42,9 @@ namespace OtelRezAppProje.Formlar.Personel
                 dateEditGiris.Text = personel.IseGirisTarihi.ToString();
                 TxtAciklama.Text = personel.Aciklama;
                 TxtSifre.Text = personel.Sifre;
-                // PictureEditOn.Image = Image.FromFile(personel.KimlikOn);
-                // PictureEditArka.Image = Image.FromFile(personel.KimlikArka);
+                labelControl17.Text = personel.KimlikOn;
+                PictureEditOn.Image = Image.FromFile(personel.KimlikOn);
+                PictureEditArka.Image = Image.FromFile(personel.KimlikArka);
                 lookUpEditDepartman.EditValue = personel.Departman;
                 lookUpEditGorev.EditValue = personel.Gorev;
 
