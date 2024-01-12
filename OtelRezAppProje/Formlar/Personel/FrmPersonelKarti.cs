@@ -42,8 +42,11 @@ namespace OtelRezAppProje.Formlar.Personel
                 dateEditGiris.Text = personel.IseGirisTarihi.ToString();
                 TxtAciklama.Text = personel.Aciklama;
                 TxtSifre.Text = personel.Sifre;
-                PictureEditOn.Image = Image.FromFile(personel.KimlikOn);
-                PictureEditArka.Image = Image.FromFile(personel.KimlikArka);
+                // PictureEditOn.Image = Image.FromFile(personel.KimlikOn);
+                // PictureEditArka.Image = Image.FromFile(personel.KimlikArka);
+                lookUpEditDepartman.EditValue = personel.Departman;
+                lookUpEditGorev.EditValue = personel.Gorev;
+
             }
             lookUpEditDepartman.Properties.DataSource = (from x in db.TblDepartman
                                                          select new
@@ -60,7 +63,7 @@ namespace OtelRezAppProje.Formlar.Personel
                                                      }).ToList();
         }
 
-        private void BtnVazgeç_Click(object sender, EventArgs e)
+        private void BtnVazgec_Click(object sender, EventArgs e)
         {
             TxtAdres.Text = PictureEditOn.GetLoadedImageLocation();
         }
@@ -102,8 +105,8 @@ namespace OtelRezAppProje.Formlar.Personel
             // deger.MailAdresi = TxtMail.Text;
             // deger.IseGirisTarihi = DateTime.Parse(dateEditGiris.Text);
             // t.IstenCikisTarihi = DateTime.Parse(dateEditCikis.Text);
-            // deger.Departman = int.Parse(lookUpEditDepartman.EditValue.ToString());
-            // deger.Gorev = int.Parse(lookUpEditGorev.EditValue.ToString());
+            deger.Departman = int.Parse(lookUpEditDepartman.EditValue.ToString());
+            deger.Gorev = int.Parse(lookUpEditGorev.EditValue.ToString());
             // deger.Aciklama = TxtAciklama.Text;
             // deger.MailAdresi = TxtMail.Text;
             deger.KimlikOn = PictureEditOn.GetLoadedImageLocation();
@@ -111,6 +114,7 @@ namespace OtelRezAppProje.Formlar.Personel
             // t.Yetki = 
             // t.Sifre = TxtSifre.Text;
             // deger.Durum = 1;
+
 
             repo.TUpdate(deger);
             XtraMessageBox.Show("Personel kartı bilgileri başarıyla güncellendi.","Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);

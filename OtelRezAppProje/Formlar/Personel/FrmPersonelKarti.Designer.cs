@@ -60,6 +60,7 @@
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.BtnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             this.BtnKaydet = new DevExpress.XtraEditors.SimpleButton();
             this.BtnVazgec = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
@@ -94,7 +95,6 @@
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit16 = new DevExpress.XtraEditors.PictureEdit();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.BtnGuncelle = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtAdSoyad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditDepartman.Properties)).BeginInit();
@@ -495,6 +495,17 @@
             this.groupControl2.TabIndex = 7;
             this.groupControl2.Text = "groupControl2";
             // 
+            // BtnGuncelle
+            // 
+            this.BtnGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnGuncelle.ImageOptions.Image")));
+            this.BtnGuncelle.Location = new System.Drawing.Point(191, 6);
+            this.BtnGuncelle.Name = "BtnGuncelle";
+            this.BtnGuncelle.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.BtnGuncelle.Size = new System.Drawing.Size(134, 39);
+            this.BtnGuncelle.TabIndex = 2;
+            this.BtnGuncelle.Text = "Güncelle";
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
+            // 
             // BtnKaydet
             // 
             this.BtnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnKaydet.ImageOptions.Image")));
@@ -508,14 +519,14 @@
             // 
             // BtnVazgec
             // 
-            this.BtnVazgec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnVazgeç.ImageOptions.Image")));
+            this.BtnVazgec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnVazgec.ImageOptions.Image")));
             this.BtnVazgec.Location = new System.Drawing.Point(331, 5);
             this.BtnVazgec.Name = "BtnVazgec";
             this.BtnVazgec.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.BtnVazgec.Size = new System.Drawing.Size(134, 39);
             this.BtnVazgec.TabIndex = 0;
             this.BtnVazgec.Text = "Vazgeç";
-            this.BtnVazgec.Click += new System.EventHandler(this.BtnVazgeç_Click);
+            this.BtnVazgec.Click += new System.EventHandler(this.BtnVazgec_Click);
             // 
             // groupControl3
             // 
@@ -853,17 +864,6 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Yetki 1";
             this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // BtnGuncelle
-            // 
-            this.BtnGuncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.BtnGuncelle.Location = new System.Drawing.Point(191, 6);
-            this.BtnGuncelle.Name = "BtnGuncelle";
-            this.BtnGuncelle.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.BtnGuncelle.Size = new System.Drawing.Size(134, 39);
-            this.BtnGuncelle.TabIndex = 2;
-            this.BtnGuncelle.Text = "Güncelle";
-            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
             // FrmPersonelKarti
             // 
