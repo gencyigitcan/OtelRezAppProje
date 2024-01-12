@@ -43,6 +43,7 @@ namespace OtelRezAppProje.Formlar.Personel
                 TxtAciklama.Text = personel.Aciklama;
                 TxtSifre.Text = personel.Sifre;
                 labelControl17.Text = personel.KimlikOn;
+                labelControl18.Text = personel.KimlikArka;
                 PictureEditOn.Image = Image.FromFile(personel.KimlikOn);
                 PictureEditArka.Image = Image.FromFile(personel.KimlikArka);
                 lookUpEditDepartman.EditValue = personel.Departman;
@@ -66,7 +67,8 @@ namespace OtelRezAppProje.Formlar.Personel
 
         private void BtnVazgec_Click(object sender, EventArgs e)
         {
-            TxtAdres.Text = PictureEditOn.GetLoadedImageLocation();
+            this.Close();
+
         }
 
         private void BtnKaydet_Click(object sender, EventArgs e)
@@ -88,7 +90,7 @@ namespace OtelRezAppProje.Formlar.Personel
             t.KimlikOn = PictureEditOn.GetLoadedImageLocation();
             t.KimlikArka = PictureEditArka.GetLoadedImageLocation();
             // t.Yetki = 
-            // t.Sifre = TxtSifre.Text;
+            t.Sifre = TxtSifre.Text;
             t.Durum = 1;
 
             repo.TAdd(t);
@@ -102,18 +104,17 @@ namespace OtelRezAppProje.Formlar.Personel
             deger.AdSoyad = TxtAdSoyad.Text;
             deger.TcKimlikNo = TxtTc.Text;
             deger.Adres = TxtAdres.Text;
-            // deger.Telefon = TxtTelefon.Text;
-            // deger.MailAdresi = TxtMail.Text;
-            // deger.IseGirisTarihi = DateTime.Parse(dateEditGiris.Text);
+            deger.Telefon = TxtTelefon.Text;
+            deger.MailAdresi = TxtMail.Text;
+            deger.IseGirisTarihi = DateTime.Parse(dateEditGiris.Text);
             // t.IstenCikisTarihi = DateTime.Parse(dateEditCikis.Text);
             deger.Departman = int.Parse(lookUpEditDepartman.EditValue.ToString());
             deger.Gorev = int.Parse(lookUpEditGorev.EditValue.ToString());
-            // deger.Aciklama = TxtAciklama.Text;
-            // deger.MailAdresi = TxtMail.Text;
+            deger.Aciklama = TxtAciklama.Text;
             deger.KimlikOn = labelControl17.Text;
             deger.KimlikArka = labelControl18.Text;
             // t.Yetki = 
-            // t.Sifre = TxtSifre.Text;
+            deger.Sifre = TxtSifre.Text;
             // deger.Durum = 1;
 
 
