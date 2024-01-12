@@ -24,11 +24,18 @@ namespace OtelRezAppProje.Formlar.Misafir
         {
             // Ülke listesi
             lookUpEditUlke.Properties.DataSource = (from x in db.TblUlke
-                                                         select new
-                                                         {
-                                                             x.UlkeId,
-                                                             x.UlkeAd
-                                                         }).ToList();
+                                                    select new
+                                                    {
+                                                        x.UlkeId,
+                                                        x.UlkeAd
+                                                    }).ToList();
+            // Şehir listesi
+            lookUpEditSehir.Properties.DataSource = (from x in db.iller
+                                                     select new
+                                                     {
+                                                         Id = x.id,
+                                                         Şehir = x.sehir
+                                                     }).ToList();
         }
     }
 }
