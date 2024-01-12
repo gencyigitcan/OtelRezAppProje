@@ -94,6 +94,12 @@ namespace OtelRezAppProje
             fr.MdiParent = this;
             fr.Show();
         }
+
+        private void BtnMisafirKarti_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Formlar.Misafir.FrmMisafirKarti fr = new Formlar.Misafir.FrmMisafirKarti();
+            fr.Show();
+        }
     }
 }
  

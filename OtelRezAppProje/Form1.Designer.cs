@@ -59,6 +59,7 @@
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.BtnMisafirKarti = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -80,9 +81,10 @@
             this.BtnUlkeTanimlari,
             this.BtnUrunGrupTanimları,
             this.BtnPersonelListesi,
-            this.BtnPersonelKarti});
+            this.BtnPersonelKarti,
+            this.BtnMisafirKarti});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 14;
+            this.ribbonControl1.MaxItemId = 15;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -195,8 +197,8 @@
             // 
             this.BtnPersonelListesi.Caption = "Personel Listesi";
             this.BtnPersonelListesi.Id = 12;
-            this.BtnPersonelListesi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.BtnPersonelListesi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.BtnPersonelListesi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnPersonelListesi.ImageOptions.Image")));
+            this.BtnPersonelListesi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnPersonelListesi.ImageOptions.LargeImage")));
             this.BtnPersonelListesi.Name = "BtnPersonelListesi";
             this.BtnPersonelListesi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnPersonelListesi_ItemClick);
             // 
@@ -231,6 +233,7 @@
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup2.ItemLinks.Add(this.BtnMisafirKarti);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             // 
             // ribbonPage3
@@ -295,6 +298,15 @@
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
+            // BtnMisafirKarti
+            // 
+            this.BtnMisafirKarti.Caption = "Yeni Misafir Kartı";
+            this.BtnMisafirKarti.Id = 14;
+            this.BtnMisafirKarti.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.BtnMisafirKarti.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.BtnMisafirKarti.Name = "BtnMisafirKarti";
+            this.BtnMisafirKarti.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnMisafirKarti_ItemClick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -346,6 +358,7 @@
         private DevExpress.XtraBars.BarButtonItem BtnPersonelListesi;
         private DevExpress.XtraBars.BarButtonItem BtnPersonelKarti;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
+        private DevExpress.XtraBars.BarButtonItem BtnMisafirKarti;
     }
 }
 
