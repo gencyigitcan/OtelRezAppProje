@@ -132,6 +132,7 @@
             lookUpEditIlce.Properties.ValueMember = "GorevId";
             lookUpEditIlce.Size = new System.Drawing.Size(132, 20);
             lookUpEditIlce.TabIndex = 25;
+            lookUpEditIlce.EditValueChanged += new System.EventHandler(this.lookUpEditilce_EditValueChanged);
             // 
             // TxtAdres
             // 
@@ -547,6 +548,7 @@
             this.lookUpEditSehir.Properties.ValueMember = "Id";
             this.lookUpEditSehir.Size = new System.Drawing.Size(132, 20);
             this.lookUpEditSehir.TabIndex = 10;
+            this.lookUpEditSehir.EditValueChanged += new System.EventHandler(this.lookUpEditSehir_EditValueChanged);
             // 
             // labelControl4
             // 

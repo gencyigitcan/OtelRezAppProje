@@ -37,5 +37,23 @@ namespace OtelRezAppProje.Formlar.Misafir
                                                          Şehir = x.sehir
                                                      }).ToList();
         }
+
+        private void lookUpEditSehir_EditValueChanged(object sender, EventArgs e)
+        {
+            int secilen;
+            secilen = int.Parse(lookUpEditSehir.EditValue.ToString());
+            lookUpEditilce.Properties.DataSource = (from x in db.ilceler  // to do
+                                                     select new
+                                                     {
+                                                         x.id,
+                                                         x.ilce,
+                                                         x.sehir
+                                                     }).Where(y => y.sehir == secilen).ToList();
+        }
+
+        private void lookUpEditilce_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
