@@ -111,8 +111,8 @@ namespace OtelRezAppProje.Formlar.Misafir
             t.Adres = TxtAdres.Text;
             t.Aciklama = TxtAciklama.Text;
             t.Durum = 1;
-            t.Sehir = lookUpEditSehir.Text;
-            t.Ilce = lookUpEditIlceler.Text;
+            //t.Sehir = lookUpEditSehir.Text;
+            //t.Ilce = lookUpEditIlceler.Text;
             t.Ulke = int.Parse(lookUpEditUlke.EditValue.ToString());
             t.KimlikFoto1 = resim1;
             t.KimlikFoto2 = resim2;

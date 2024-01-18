@@ -99,8 +99,6 @@
           <Property Name="KimlikFoto1" Type="nvarchar" MaxLength="100" />
           <Property Name="KimlikFoto2" Type="nvarchar" MaxLength="200" />
           <Property Name="Ulke" Type="int" />
-          <Property Name="Sehir" Type="nvarchar" MaxLength="30" />
-          <Property Name="Ilce" Type="nvarchar" MaxLength="50" />
           <Property Name="Durum" Type="int" />
         </EntityType>
         <EntityType Name="TblOda">
@@ -569,8 +567,6 @@
           <Property Name="Durum" Type="Int32" />
           <NavigationProperty Name="TblDurum" Relationship="Self.FK_TblMisafir_TblDurum" FromRole="TblMisafir" ToRole="TblDurum" />
           <NavigationProperty Name="TblUlke" Relationship="Self.FK_TblMisafir_TblUlke" FromRole="TblMisafir" ToRole="TblUlke" />
-          <Property Name="Sehir" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="Ilce" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="TblOda">
           <Key>
@@ -1038,8 +1034,6 @@
           <EntitySetMapping Name="TblMisafir">
             <EntityTypeMapping TypeName="Db_OtelRezAppModel.TblMisafir">
               <MappingFragment StoreEntitySet="TblMisafir">
-                <ScalarProperty Name="Ilce" ColumnName="Ilce" />
-                <ScalarProperty Name="Sehir" ColumnName="Sehir" />
                 <ScalarProperty Name="MisafirId" ColumnName="MisafirId" />
                 <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
                 <ScalarProperty Name="TCKimlikNo" ColumnName="TCKimlikNo" />

@@ -30,9 +30,9 @@ namespace OtelRezAppProje.Formlar.Misafir
                                            x.AdSoyad,
                                            x.TCKimlikNo,
                                            x.TelefonNo,
-                                           x.MailAdresi,
-                                           x.Sehir,
-                                           x.Ilce
+                                           x.MailAdresi
+                                          // x.Sehir,
+                                          // x.Ilce
                                        }).ToList();
         }
 
