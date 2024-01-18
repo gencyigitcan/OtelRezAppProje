@@ -58,6 +58,23 @@ namespace OtelRezAppProje.Formlar.Misafir
 
         }
 
+        string resim1, resim2;
+
+        private void PictureEditOn_EditValueChanged(object sender, EventArgs e)
+        {
+            resim1 = PictureEditOn.GetLoadedImageLocation().ToString();
+        }
+
+        private void PictureEditArka_EditValueChanged(object sender, EventArgs e)
+        {
+            resim2 = PictureEditArka.GetLoadedImageLocation().ToString();
+        }
+
+        private void BtnVazgec_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
             Repository<TblMisafir> repo = new Repository<TblMisafir>();
@@ -71,6 +88,8 @@ namespace OtelRezAppProje.Formlar.Misafir
             t.Sehir = lookUpEditSehir.Text;
             t.Ilce = lookUpEditIlceler.Text;
             t.Ulke = int.Parse(lookUpEditUlke.EditValue.ToString());
+            t.KimlikFoto1 = resim1;
+            t.KimlikFoto2 = resim2;
 
             repo.TAdd(t);
             XtraMessageBox.Show("Misafir sisteme başarılı bir şekilde kaydedildi.",

@@ -182,6 +182,7 @@
             this.BtnVazgec.Size = new System.Drawing.Size(134, 39);
             this.BtnVazgec.TabIndex = 0;
             this.BtnVazgec.Text = "Vazgeç";
+            this.BtnVazgec.Click += new System.EventHandler(this.BtnVazgec_Click);
             // 
             // labelControl10
             // 
@@ -330,6 +331,7 @@
             this.PictureEditArka.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.PictureEditArka.Size = new System.Drawing.Size(183, 96);
             this.PictureEditArka.TabIndex = 1;
+            this.PictureEditArka.EditValueChanged += new System.EventHandler(this.PictureEditArka_EditValueChanged);
             // 
             // PictureEditOn
             // 
@@ -339,6 +341,7 @@
             this.PictureEditOn.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.PictureEditOn.Size = new System.Drawing.Size(183, 96);
             this.PictureEditOn.TabIndex = 0;
+            this.PictureEditOn.EditValueChanged += new System.EventHandler(this.PictureEditOn_EditValueChanged);
             // 
             // labelControl12
             // 
