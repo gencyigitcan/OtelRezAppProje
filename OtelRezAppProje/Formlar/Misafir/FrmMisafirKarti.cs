@@ -1,4 +1,6 @@
-﻿using OtelRezAppProje.Entity;
+﻿using DevExpress.XtraEditors;
+using OtelRezAppProje.Entity;
+using OtelRezAppProje.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,18 +44,37 @@ namespace OtelRezAppProje.Formlar.Misafir
         {
             int secilen;
             secilen = int.Parse(lookUpEditSehir.EditValue.ToString());
-           lookUpEditIlceler.Properties.DataSource = (from x in db.ilceler
-                                                      select new
-                                                      {
-                                                          Id = x.id,
-                                                          İlçe = x.ilce,
-                                                          Şehir = x.sehir
-                                                      }).Where(y => y.Şehir == secilen).ToList();
+            lookUpEditIlceler.Properties.DataSource = (from x in db.ilceler
+                                                       select new
+                                                       {
+                                                           Id = x.id,
+                                                           İlçe = x.ilce,
+                                                           Şehir = x.sehir
+                                                       }).Where(y => y.Şehir == secilen).ToList();
         }
 
         private void lookUpEditilce_EditValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnKaydet_Click(object sender, EventArgs e)
+        {
+            Repository<TblMisafir> repo = new Repository<TblMisafir>();
+            TblMisafir t = new TblMisafir();
+            t.AdSoyad = TxtAdSoyad.Text;
+            t.TCKimlikNo = TxtTc.Text;
+            t.MailAdresi = TxtMail.Text;
+            t.Adres = TxtAdres.Text;
+            t.Aciklama = TxtAciklama.Text;
+            t.Durum = 1;
+            t.Sehir = lookUpEditSehir.Text;
+            t.Ilce = lookUpEditIlceler.Text;
+            t.Ulke = int.Parse(lookUpEditUlke.EditValue.ToString());
+
+            repo.TAdd(t);
+            XtraMessageBox.Show("Misafir sisteme başarılı bir şekilde kaydedildi.",
+                "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

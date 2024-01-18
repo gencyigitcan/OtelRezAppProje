@@ -383,6 +383,18 @@
         SUVORK5CYII=
 </value>
   </data>
+  <data name="xtraTabPage2.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACV0RVh0VGl0
+        bGUAR3JhbmRUb3RhbHNQaXZvdFRhYmxlO0RvY3VtZW50O4Z9elYAAAFNSURBVDhPhZPLSsNAFIbb0nbj
+        QnwZH0oURQQpolJEFFFQKgi66UJUqCgiUgQ3bgQvLyKKVntJcz2eb2gKpjM08MFk/i8/J0OSE5GcXvna
+        +cvR4cWbjAMPn+fMs4OCwsHpsySJSBQnTsjx8LMFxd36k4RRIv0glnrjdQj307NNAzkefragtHX8qEIs
+        nh85IcfDzxaUq7UHCcJYuv3IkE7AOp2AHA9/pGBt/158FTpe6IQcz1qwstfU943ktxv8OwPu0wnI8awF
+        lZ07856tju+EHM9asLx9Kz0Vvtq+IZ2AdToBOZ61YGnzRg8slM+fvhNyPGvB4sa1dPWgPlqeE3I8a8FC
+        9cqcdDpuyvu3N1yT49kKSvPrl+ZzbfcCJ+R4+NmC4kzl7GRutSHjwMPPFhSUsjKhTCpTFtgnxxv5mfJs
+        KkWlpCBlYZ8cb/A7S+4PHJOVudG4XT0AAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="pictureEdit13.EditValue" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
@@ -429,18 +441,6 @@
         9YdSUwJl5FrIY7bRTj8Ah9jdEOlqYO1dCTOnHFhJAnu5wpElpDOS4D1n4KkJ5i3kQPgSQSwEs6AjxhJp
         w2w96s2loS2W8oQeC2VaP531flNx1I8mtgGXeBbObz+9jvlswOOOjPtD09jA/8uQYF7dlgTzQURFeD/F
         nWBePMOJP74+Pw0AnP8AExOfJqp7hEIAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="xtraTabPage2.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACV0RVh0VGl0
-        bGUAR3JhbmRUb3RhbHNQaXZvdFRhYmxlO0RvY3VtZW50O4Z9elYAAAFNSURBVDhPhZPLSsNAFIbb0nbj
-        QnwZH0oURQQpolJEFFFQKgi66UJUqCgiUgQ3bgQvLyKKVntJcz2eb2gKpjM08MFk/i8/J0OSE5GcXvna
-        +cvR4cWbjAMPn+fMs4OCwsHpsySJSBQnTsjx8LMFxd36k4RRIv0glnrjdQj307NNAzkefragtHX8qEIs
-        nh85IcfDzxaUq7UHCcJYuv3IkE7AOp2AHA9/pGBt/158FTpe6IQcz1qwstfU943ktxv8OwPu0wnI8awF
-        lZ07856tju+EHM9asLx9Kz0Vvtq+IZ2AdToBOZ61YGnzRg8slM+fvhNyPGvB4sa1dPWgPlqeE3I8a8FC
-        9cqcdDpuyvu3N1yT49kKSvPrl+ZzbfcCJ+R4+NmC4kzl7GRutSHjwMPPFhSUsjKhTCpTFtgnxxv5mfJs
-        KkWlpCBlYZ8cb/A7S+4PHJOVudG4XT0AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="xtraTabPage1.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
