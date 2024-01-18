@@ -42,13 +42,13 @@ namespace OtelRezAppProje.Formlar.Misafir
         {
             int secilen;
             secilen = int.Parse(lookUpEditSehir.EditValue.ToString());
-            lookUpEditilce.Properties.DataSource = (from x in db.ilceler  // to do
-                                                     select new
-                                                     {
-                                                         x.id,
-                                                         x.ilce,
-                                                         x.sehir
-                                                     }).Where(y => y.sehir == secilen).ToList();
+           lookUpEditIlceler.Properties.DataSource = (from x in db.ilceler
+                                                      select new
+                                                      {
+                                                          Id = x.id,
+                                                          İlçe = x.ilce,
+                                                          Şehir = x.sehir
+                                                      }).Where(y => y.Şehir == secilen).ToList();
         }
 
         private void lookUpEditilce_EditValueChanged(object sender, EventArgs e)

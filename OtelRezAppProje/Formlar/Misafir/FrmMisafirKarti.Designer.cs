@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.LookUpEdit lookUpEditIlce;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMisafirKarti));
             this.TxtAdres = new DevExpress.XtraEditors.MemoEdit();
             this.pictureEdit12 = new DevExpress.XtraEditors.PictureEdit();
@@ -78,8 +77,7 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.TxtAdSoyad = new DevExpress.XtraEditors.TextEdit();
-            lookUpEditIlce = new DevExpress.XtraEditors.LookUpEdit();
-            ((System.ComponentModel.ISupportInitialize)(lookUpEditIlce.Properties)).BeginInit();
+            this.lookUpEditIlceler = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtAdres.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit12.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -119,20 +117,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.TxtTc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtAdSoyad.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditIlceler.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lookUpEditIlce
-            // 
-            lookUpEditIlce.Location = new System.Drawing.Point(345, 61);
-            lookUpEditIlce.Name = "lookUpEditIlce";
-            lookUpEditIlce.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            lookUpEditIlce.Properties.DisplayMember = "GorevAd";
-            lookUpEditIlce.Properties.NullText = "İlçe Seçiniz";
-            lookUpEditIlce.Properties.ValueMember = "GorevId";
-            lookUpEditIlce.Size = new System.Drawing.Size(132, 20);
-            lookUpEditIlce.TabIndex = 25;
-            lookUpEditIlce.EditValueChanged += new System.EventHandler(this.lookUpEditilce_EditValueChanged);
             // 
             // TxtAdres
             // 
@@ -411,9 +397,9 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.lookUpEditIlceler);
             this.groupControl1.Controls.Add(this.labelControl6);
             this.groupControl1.Controls.Add(this.pictureEdit6);
-            this.groupControl1.Controls.Add(lookUpEditIlce);
             this.groupControl1.Controls.Add(this.labelControl8);
             this.groupControl1.Controls.Add(this.pictureEdit8);
             this.groupControl1.Controls.Add(this.textEdit6);
@@ -639,6 +625,18 @@
             this.TxtAdSoyad.Size = new System.Drawing.Size(382, 20);
             this.TxtAdSoyad.TabIndex = 1;
             // 
+            // lookUpEditIlceler
+            // 
+            this.lookUpEditIlceler.Location = new System.Drawing.Point(345, 61);
+            this.lookUpEditIlceler.Name = "lookUpEditIlceler";
+            this.lookUpEditIlceler.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEditIlceler.Properties.DisplayMember = "İlçe";
+            this.lookUpEditIlceler.Properties.NullText = "İlçe Seçiniz";
+            this.lookUpEditIlceler.Properties.ValueMember = "Id";
+            this.lookUpEditIlceler.Size = new System.Drawing.Size(132, 20);
+            this.lookUpEditIlceler.TabIndex = 28;
+            // 
             // FrmMisafirKarti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -651,7 +649,6 @@
             this.Name = "FrmMisafirKarti";
             this.Text = "Misafir Kartı";
             this.Load += new System.EventHandler(this.FrmMisafirKarti_Load);
-            ((System.ComponentModel.ISupportInitialize)(lookUpEditIlce.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtAdres.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit12.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
@@ -695,6 +692,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.TxtTc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtAdSoyad.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditIlceler.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -749,5 +747,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraEditors.TextEdit TxtAdSoyad;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEditIlceler;
     }
 }
