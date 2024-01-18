@@ -1,4 +1,5 @@
 ﻿using OtelRezAppProje.Entity;
+using OtelRezAppProje.Formlar.Personel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,6 +26,7 @@ namespace OtelRezAppProje.Formlar.Misafir
             gridControl1.DataSource = (from x in db.TblMisafir
                                        select new
                                        {
+                                           x.MisafirId,
                                            x.AdSoyad,
                                            x.TCKimlikNo,
                                            x.TelefonNo,
@@ -32,6 +34,13 @@ namespace OtelRezAppProje.Formlar.Misafir
                                            x.Sehir,
                                            x.Ilce
                                        }).ToList();
+        }
+
+        private void gridView1_DoubleClick(object sender, EventArgs e)
+        {
+            FrmMisafirKarti fr = new FrmMisafirKarti();
+            fr.id = int.Parse(gridView1.GetFocusedRowCellValue("MisafirId").ToString());
+            fr.Show();
         }
     }
 }

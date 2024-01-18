@@ -22,8 +22,36 @@ namespace OtelRezAppProje.Formlar.Misafir
 
         Db_OtelRezAppEntities db = new Db_OtelRezAppEntities();
 
+        Repository<TblMisafir> repo = new Repository<TblMisafir>();
+        TblMisafir t = new TblMisafir();
+
+        string resim1, resim2;
+
+        public int id;
         private void FrmMisafirKarti_Load(object sender, EventArgs e)
         {
+            // Güncellenecek Kart Bilgileri
+
+            if (id != 0)
+            {
+                var misafir = repo.Find(x => x.MisafirId == id);
+
+                TxtAdSoyad.Text = misafir.AdSoyad;
+                TxtTc.Text = misafir.TCKimlikNo;
+                TxtAdres.Text = misafir.Adres;
+                TxtTelefon.Text = misafir.TelefonNo;
+                TxtMail.Text = misafir.MailAdresi;
+                TxtAciklama.Text = misafir.Aciklama;
+                resim1 = misafir.KimlikFoto1;
+                resim2 = misafir.KimlikFoto2;
+                PictureEditOn.Image = Image.FromFile(misafir.KimlikFoto1);
+                PictureEditArka.Image = Image.FromFile(misafir.KimlikFoto2);
+             //   lookUpEditSehir.EditValue = misafir.Sehir;
+                lookUpEditUlke.EditValue = misafir.Ulke;
+             //   lookUpEditIlceler.EditValue = misafir.Ilce;
+
+            }
+
             // Ülke listesi
             lookUpEditUlke.Properties.DataSource = (from x in db.TblUlke
                                                     select new
@@ -43,14 +71,14 @@ namespace OtelRezAppProje.Formlar.Misafir
         private void lookUpEditSehir_EditValueChanged(object sender, EventArgs e)
         {
             int secilen;
-            secilen = int.Parse(lookUpEditSehir.EditValue.ToString());
-            lookUpEditIlceler.Properties.DataSource = (from x in db.ilceler
-                                                       select new
-                                                       {
-                                                           Id = x.id,
-                                                           İlçe = x.ilce,
-                                                           Şehir = x.sehir
-                                                       }).Where(y => y.Şehir == secilen).ToList();
+            //secilen = int.Parse(lookUpEditSehir.EditValue.ToString());
+            //lookUpEditIlceler.Properties.DataSource = (from x in db.ilceler
+            //                                           select new
+            //                                           {
+            //                                               Id = x.id,
+            //                                               İlçe = x.ilce,
+            //                                               Şehir = x.sehir
+            //                                           }).Where(y => y.Şehir == secilen).ToList();
         }
 
         private void lookUpEditilce_EditValueChanged(object sender, EventArgs e)
@@ -58,7 +86,6 @@ namespace OtelRezAppProje.Formlar.Misafir
 
         }
 
-        string resim1, resim2;
 
         private void PictureEditOn_EditValueChanged(object sender, EventArgs e)
         {
@@ -77,8 +104,7 @@ namespace OtelRezAppProje.Formlar.Misafir
 
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
-            Repository<TblMisafir> repo = new Repository<TblMisafir>();
-            TblMisafir t = new TblMisafir();
+            
             t.AdSoyad = TxtAdSoyad.Text;
             t.TCKimlikNo = TxtTc.Text;
             t.MailAdresi = TxtMail.Text;
